@@ -45,6 +45,7 @@ def about(request):
     )
 
 def shop(request):
+    """Renders the Shop page"""
     assert isinstance(request, HttpRequest)
     return render(
         request,
