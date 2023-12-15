@@ -43,3 +43,15 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+def shop(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/shop.html',
+        {
+            'title':'Shop',
+            'message':'The Shop',
+            'year':datetime.now().year,
+            }
+        )
