@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34301.259
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CrochetiveWebsite", "CrochetiveWebsite\CrochetiveWebsite.pyproj", "{50EC7F49-6DE1-4A44-9F7D-BEB3C9CD08A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50EC7F49-6DE1-4A44-9F7D-BEB3C9CD08A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EC7F49-6DE1-4A44-9F7D-BEB3C9CD08A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EC7F49-6DE1-4A44-9F7D-BEB3C9CD08A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EC7F49-6DE1-4A44-9F7D-BEB3C9CD08A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {104F8756-FAB8-4ADC-8BB2-7E558FB28197}
+	EndGlobalSection
+EndGlobal
