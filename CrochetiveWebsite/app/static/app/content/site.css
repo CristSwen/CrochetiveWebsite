@@ -32,6 +32,8 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
+/*** STYLING FOR NAVBAR AND HOME BACKGROUND  ***/
+
 *{
     padding: 0;
     margin: 0;
@@ -89,5 +91,16 @@ body{
 .navbar a:hover::before{
     width: 100%;
 
+
+}
+
+/****   END OF STYLING FOR HOME NAVBAR AND BACKGROUND  ****/
+
+
+
+/****   STYLING FOR HOME PAGE    ****/
+
+.Home_bckg{
+    background-color: white;
 
 }
