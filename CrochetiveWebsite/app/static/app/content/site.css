@@ -101,7 +101,7 @@ body{
 /****   STYLING FOR HOME PAGE    ****/
 
 .Home_bckg{
-    color: white;
+    background-color: white;
     z-index: -1;
 }
 
@@ -209,3 +209,31 @@ footer{
 }
 
 /****  FOOTER SECTION ENDS HERE   *****/
+
+/***  button styling STARTS HERE   ****/
+
+.home-button,
+.contact-button{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    z-index: -2;
+}
+
+.contact-button{
+    background-color: #008CBA;
+}
+
+.home-button:hover,
+.contact-button:hover{
+    background-color: #005a7a !important;
+}
+
+/***  button styling ENDS HERE  ***/
