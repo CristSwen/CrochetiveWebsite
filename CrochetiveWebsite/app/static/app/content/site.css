@@ -102,5 +102,5 @@ body{
 
 .Home_bckg{
     background-color: white;
-
+    z-index: 0;
 }
