@@ -7,6 +7,8 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/4926039c9e.js" crossorigin="anonymous"></script>
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
 </head>
 
@@ -35,8 +37,21 @@
     <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
     <script src="{% static 'app/scripts/respond.js' %}"></script>
 {% block scripts %}{% endblock %}
-    <footer id="block-footer">
-            <p>&copy; {{ year }} - My Django Application</p>
+    <footer>
+        <div class="footer-content">
+            <h3>Simply Crochetive</h3>
+            <p>Crocheting is dope</p>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/profile.php?id=100094468945507&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com/natassjafrench?igshid=MW84Y2Jzbzdwbn1aQ"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.tiktok.com/@natassjafrench?_t=8h981vh7z2Z&_r=1"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; {{ year }} codeOpacity. designed by <span>nethunt</span></p>
+        </div>
     </footer>
 </body>
 
