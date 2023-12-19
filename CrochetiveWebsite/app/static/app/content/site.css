@@ -104,3 +104,13 @@ body{
     background-color: white;
     z-index: 0;
 }
+
+
+/****  FOOTER SECTION STARTS HERE   *****/
+
+#block-footer{
+    bottom: 0;
+    height: 15vw;
+}
+
+/****  FOOTER SECTION ENDS HERE   *****/
