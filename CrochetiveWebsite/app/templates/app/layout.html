@@ -14,24 +14,23 @@
 </head>
 
 
-<body>
-    
-    <header class="header">
-        <a href="#" class="logo">logo</a>
-        <nav class="navbar">                
-         <a href="{% url 'home' %}">Home</a>
-         <a href="{% url 'about' %}">About</a>
-         <a href="{% url 'contact' %}">Contact</a>
-         <a href="{% url 'shop' %}">Shop</a>
+<body class="home-body-container">
+
+        <header class="header">
+            <a href="#" class="logo">logo</a>
+            <nav class="navbar">                
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'shop' %}">Shop</a>
                 
             {% include 'app/loginpartial.html' %}
-        </nav>
-    </header>
+            </nav>
+        </header>
 
 
-    <div class="home-body-container">
+    
     {% block content %}{% endblock %}                
-    </div>
 
     
 
