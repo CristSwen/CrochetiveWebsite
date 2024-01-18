@@ -100,7 +100,7 @@ body{
 
 /****   STYLING FOR HOME PAGE    ****/
 
-.Home_bckg{
+.Home_product_bckg{
     background-color: white;
     z-index: -1;
 }
@@ -209,6 +209,8 @@ footer{
 }
 
 /****  FOOTER SECTION ENDS HERE   *****/
+
+
 
 /***  button styling STARTS HERE   ****/
 
