@@ -70,7 +70,7 @@ input[type="checkbox"].input-validation-error {
 
 }
 
-.navbar a{
+.home_navbar a{
     position: relative;
     font-size: 18px;
     color: white;
@@ -79,7 +79,7 @@ input[type="checkbox"].input-validation-error {
     margin-left: 40px;
 }
 
-.navbar a::before{
+.home_navbar a::before{
     content: '';
     position: absolute;
     top: 100%;
@@ -90,7 +90,7 @@ input[type="checkbox"].input-validation-error {
     transition: .3s;
 }
 
-.navbar a:hover::before{
+.home_navbar a:hover::before{
     width: 100%;
 
 
