@@ -34,6 +34,8 @@ input[type="checkbox"].input-validation-error {
 
 /*** STYLING FOR NAVBAR AND HOME BACKGROUND  ***/
 
+
+
 *{
     padding: 0;
     margin: 0;
@@ -106,20 +108,18 @@ input[type="checkbox"].input-validation-error {
     z-index: 0;
     height: 400px;
     width: 100%;
-    position: relative;
     margin-top: 20px;
-    top: 300px;
 }
 
 .home-bckg-text {
     z-index: 1;
-    position: relative;
     align-items: center;
     top: 15vw;
     left: 8vw;
     color: white;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
+    margin-top: 100px;
 }
 
 .home-bckg-text h1 {
