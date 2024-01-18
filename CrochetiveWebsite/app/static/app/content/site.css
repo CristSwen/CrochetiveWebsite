@@ -41,11 +41,12 @@ input[type="checkbox"].input-validation-error {
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+.home-body-container{
     min-height: 100vh;
     background: url(../images/chrochetBckg.webp) no-repeat;
     background-size: cover;
     background-position: center;
+    object-fit: cover;
 }
 
 .header{
@@ -100,19 +101,25 @@ body{
 
 /****   STYLING FOR HOME PAGE    ****/
 
-.Home_product_bckg{
-    background-color: white;
-    z-index: -1;
+.Home_product_bckg {
+    background-color: rgb(255, 255, 255);
+    z-index: 0;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    top: 300px;
 }
 
 .home-bckg-text {
-    z-index: -1;
-    position: absolute;
+    z-index: 1;
+    position: relative;
     align-items: center;
     top: 15vw;
     left: 8vw;
     color: white;
     font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
 }
 
 .home-bckg-text h1 {
@@ -120,11 +127,15 @@ body{
 
 }
 
+.centered-text {
+    text-align: center;
+}
+
 
 /****  FOOTER SECTION STARTS HERE   *****/
 
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
