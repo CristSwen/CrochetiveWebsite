@@ -142,6 +142,10 @@ input[type="checkbox"].input-validation-error {
 /****   SHOP NAVBAR STYLING STARTS HERE   ****/
 
 
+.shop_navbar {
+    z-index: -2;
+}
+
 /****   SHOP NAVBAR STYLING ENDS HERE   ****/
 
 
