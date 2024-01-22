@@ -32,7 +32,7 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
-/*** STYLING FOR NAVBAR AND HOME BACKGROUND  ***/
+/*** STYLING FOR  HEADER NAVBAR AND HOME BACKGROUND  ***/
 
 
 
@@ -136,6 +136,15 @@ input[type="checkbox"].input-validation-error {
 .home_featured-text {
     padding-top: 50px;
 }
+
+/***  HOME PAGE STYLING ENDS HERE    ***/
+
+/****   SHOP NAVBAR STYLING STARTS HERE   ****/
+
+
+/****   SHOP NAVBAR STYLING ENDS HERE   ****/
+
+
 /****  FOOTER SECTION STARTS HERE   *****/
 footer {
     position: relative;
