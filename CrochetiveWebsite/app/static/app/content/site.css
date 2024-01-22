@@ -143,7 +143,11 @@ input[type="checkbox"].input-validation-error {
 
 
 .shop_navbar {
-    z-index: -2;
+    display: block;
+    width: 100%;
+    align-content: center;
+    background-color: darkorange;
+    height: 100px;
 }
 
 /****   SHOP NAVBAR STYLING ENDS HERE   ****/
