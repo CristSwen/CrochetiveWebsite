@@ -156,7 +156,15 @@ input[type="checkbox"].input-validation-error {
     align-content: center;
     background-color: #ADD8E6;
     height: 100px;
-    margin-top: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+.shop_navbar a {
+    padding-right: 10px;
+    font-size: 30px;
+    padding-left: 10px;
 }
 
 /****   SHOP NAVBAR STYLING ENDS HERE   ****/
