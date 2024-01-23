@@ -1,4 +1,10 @@
 
+/****
+      COLOR SCHEME
+        LightBlue: #ADD8E6
+        LemonChiffon: #FFFACD
+    *****/
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -148,7 +154,7 @@ input[type="checkbox"].input-validation-error {
     display: block;
     width: 100%;
     align-content: center;
-    background-color: darkorange;
+    background-color: #ADD8E6;
     height: 100px;
     margin-top: 20px;
 }
