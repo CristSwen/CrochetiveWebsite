@@ -139,7 +139,7 @@ input[type="checkbox"].input-validation-error {
     text-align: center;
 }
 
-.home_featured-text {
+.home_apparel_text {
     padding-top: 50px;
     margin-top: 0;
 
@@ -161,11 +161,12 @@ input[type="checkbox"].input-validation-error {
     padding-top: 30px;
 }
 
-.shop_navbar a {
-    padding-right: 10px;
-    font-size: 30px;
-    padding-left: 10px;
-}
+    .shop_navbar a {
+        padding-right: 10px;
+        font-size: 30px;
+        padding-left: 30px;
+        font-family: 'Poppins', sans-serif;
+    }
 
 /****   SHOP NAVBAR STYLING ENDS HERE   ****/
 
