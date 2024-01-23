@@ -111,7 +111,7 @@ input[type="checkbox"].input-validation-error {
 .Home_product_bckg {
     background-color: rgb(255, 255, 255);
     z-index: 0;
-    height: 400px;
+    min-height: 400px;
     width: 100%;
     display: block;
     margin-top: 0;
@@ -146,6 +146,14 @@ input[type="checkbox"].input-validation-error {
 }
 
 /***  HOME PAGE STYLING ENDS HERE    ***/
+
+/***   SHOP CARD STYLING STARTS HERE    ****/
+
+.card p {
+    margin-bottom: 0;
+}
+
+/***   SHOP CARD STYLING ENDS HERE    ****/
 
 /****   SHOP NAVBAR STYLING STARTS HERE   ****/
 
