@@ -60,6 +60,7 @@
   <ItemGroup>
     <Content Include="app\static\app\images\beanie-example.jpg" />
     <Content Include="app\static\app\images\chrochetBckg.webp" />
+    <Content Include="app\static\app\images\yellow_blue_crocheting.jpg" />
     <Content Include="app\templates\app\shop.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
