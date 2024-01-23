@@ -60,6 +60,9 @@
   <ItemGroup>
     <Content Include="app\static\app\images\beanie-example.jpg" />
     <Content Include="app\static\app\images\chrochetBckg.webp" />
+    <Content Include="app\static\app\images\crochet_beanie.jpg" />
+    <Content Include="app\static\app\images\crochet_cat.jpg" />
+    <Content Include="app\static\app\images\crochet_collar.webp" />
     <Content Include="app\static\app\images\yellow_blue_crocheting.jpg" />
     <Content Include="app\templates\app\shop.html" />
     <Content Include="requirements.txt" />
