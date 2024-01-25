@@ -37,8 +37,8 @@
                         <h1>{{ product.name }}</h1>
                         <p class="price">${{ product.price }}</p>
                         {% if user.is_authenticated and user == product.owner %}
-                            <p><a href="{% url 'edit_product' product.id %}"></a></p>
-                            <p><a href="{% url 'delete_product' product.id %}"></a></p>
+                            <p><a href="{% url 'edit_product' product.id %}">Edit</a></p>
+                            <p><a href="{% url 'delete_product' product.id %}">Delete</a></p>
                         {% endif %}
                     </div>
                 </div>
