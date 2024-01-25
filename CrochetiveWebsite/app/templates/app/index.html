@@ -39,24 +39,26 @@
     <div class="Home_product_bckg" id="Toys">
         <h1 class="centered-text home_title_text">Toys</h1>
         {% for product in products_toys %}
-        <div class="card">
-            <img src="../../static/app/images/crochet_cat.jpg" alt="Denim Jeans" style="width:100%" />
-            <h1>Crochet Cat</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
+            <div class="card">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width:100%" />
+                <h1>{{ product.name }}</h1>
+                <p class="price">${{ product.price }}</p>
+                <p><button>Add to Cart</button></p>
+            </div>
+        {% endfor %}
     </div>
 
         <!-- DIV for pets section -->
     <div class="Home_product_bckg" id="Pets">
         <h1 class="centered-text home_title_text">Pets</h1>
         {% for product in products_pets %}
-        <div class="card">
-            <img src="../../static/app/images/crochet_collar.webp" alt="Denim Jeans" style="width:100%" />
-            <h1>Crochet Collar</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
+            <div class="card">
+                <img src="{{ produce.image.url }}" alt="{{ product.name }}" style="width:100%" />
+                <h1>{{ product.name }}</h1>
+                <p class="price">${{ product.price }}</p>
+                <p><button>Add to Cart</button></p>
+            </div>
+        {% endfor %}
     </div>
 
     
