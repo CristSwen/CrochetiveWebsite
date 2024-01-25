@@ -192,11 +192,20 @@ input[type="checkbox"].input-validation-error {
 /***   SHOP CARD STYLING ENDS HERE    ****/
 
 
+/****    CREATE/EDIT/DELTE BUTTONS STYLING STARTS HERE    ****/
+
+.create_button {
+    z-index: -1;
+}
+
+
+
+/****    CREATE/EDIT/DELTE BUTTONS STYLING ENDS HERE    ****/
+
+
 
 
 /****   SHOP NAVBAR STYLING STARTS HERE   ****/
-
-
 .shop_navbar {
     display: block;
     width: 100%;
