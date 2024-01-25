@@ -62,7 +62,7 @@ def shop(request):
 
 
 def create_product(request, category_id):
-    category = get_object_or_404(Category, pk-category_id)
+    category = get_object_or_404(Category, pk=category_id)
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -73,3 +73,14 @@ def create_product(request, category_id):
     else:
         form = ProductForm()
     return render(request, 'app/create_product.html', {'form': form, 'category': category})
+
+def edit_product(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == "POST":
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = ProductForm(instance=product)
+    return redner(request, "app/edit_product.html", {'form': form, 'product': product})
