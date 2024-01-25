@@ -78,11 +78,12 @@ input[type="checkbox"].input-validation-error {
 
 .home_navbar a{
     position: relative;
-    font-size: 18px;
+    font-size: 35px;
     color: white;
     font-weight: 500;
     text-decoration: none;
     margin-left: 40px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .home_navbar a::before{
@@ -129,6 +130,7 @@ input[type="checkbox"].input-validation-error {
     margin-top: 300px;
     margin-left: 100px;
     display: block;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .home-bckg-text h1 {
