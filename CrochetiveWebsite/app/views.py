@@ -5,6 +5,9 @@ Definition of views.
 from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Category, Product
+from .forms import ProductForm
 
 def home(request):
     """Renders the home page."""
@@ -56,3 +59,17 @@ def shop(request):
             'year':datetime.now().year,
             }
         )
+
+
+def create_product(request, category_id):
+    category = get_object_or_404(Category, pk-category_id)
+    if request.method == "POST":
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.category = category
+            product.save()
+            return redirect('home')
+    else:
+        form = ProductForm()
+    return render(request, 'app/create_product.html', {'form': form, 'category': category})
