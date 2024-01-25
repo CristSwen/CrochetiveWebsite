@@ -74,6 +74,9 @@ def create_product(request, category_id):
         form = ProductForm()
     return render(request, 'app/create_product.html', {'form': form, 'category': category})
 
+
+
+
 def edit_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == "POST":
@@ -84,3 +87,11 @@ def edit_product(request, product_id):
     else:
         form = ProductForm(instance=product)
     return redner(request, "app/edit_product.html", {'form': form, 'product': product})
+
+
+def delete_product(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        product.delete()
+        return redirect('shop')
+    return render(request, 'app/delete_product.html', {'product': product})
