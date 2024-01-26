@@ -22,7 +22,11 @@
         <a href="#pets">Pets</a>
     </nav>
 
-    {% for category in categories %}
+
+    <div class="Home_product_bckg">
+
+        <!-- This will check if the user is authenticated/owner and will allow them to create a product-->
+        {% for category in categories %}
             {% if user.is_authenticated %}
                 <p>User is authenticated: {{ user.username }}</p> <!--LINE FOR DEBUGGING-->
                 <p>Category: {{ category.name }}</p> <!--LINE FOR DEBUGGING-->
@@ -31,8 +35,9 @@
                 <p>User is not authenticated</p> <!--LINE FOR DEBUGGING-->
             {% endif %}
         {% endfor %}
+        
 
-    <div class="Home_product_bckg">
+        <!-- Will separate products based on what category they are in -->
         {% for category in categories %}
             <h1 id="{{ category.name|lower }}" class="centered-text home_title_text">{{ category.name }}</h1>
             {% for product in category.products.all %}
@@ -41,6 +46,7 @@
                         <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width:100%"/>
                         <h1>{{ product.name }}</h1>
                         <p class="price">${{ product.price }}</p>
+                        <!-- If User is authenticated/owner will allow them to edit/delete-->
                         {% if user.is_authenticated and user == product.owner %}
                             <p><a href="{% url 'edit_product' product.id %}">Edit</a></p>
                             <p><a href="{% url 'delete_product' product.id %}">Delete</a></p>
