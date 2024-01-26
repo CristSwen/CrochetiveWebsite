@@ -20,7 +20,9 @@
         <a href="#apparel">Apparel</a>
         <a href="#toys">Toys</a>
         <a href="#pets">Pets</a>
-        {% for category in categories %}
+    </nav>
+
+    {% for category in categories %}
             {% if user.is_authenticated %}
                 <p>User is authenticated: {{ user.username }}</p> <!--LINE FOR DEBUGGING-->
                 <p>Category: {{ category.name }}</p> <!--LINE FOR DEBUGGING-->
@@ -29,7 +31,6 @@
                 <p>User is not authenticated</p> <!--LINE FOR DEBUGGING-->
             {% endif %}
         {% endfor %}
-    </nav>
 
     <div class="Home_product_bckg">
         {% for category in categories %}
