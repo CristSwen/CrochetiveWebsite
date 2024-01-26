@@ -196,6 +196,7 @@ input[type="checkbox"].input-validation-error {
 
 .create_button {
     z-index: 1;
+    color: blue;
 }
 
 

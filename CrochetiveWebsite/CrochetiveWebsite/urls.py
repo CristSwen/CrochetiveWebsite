@@ -18,7 +18,7 @@ urlpatterns = [
     path('shop/', views.shop, name='shop'),
     path('create_product/<int:category_id>/', create_product, name='create_product'),
     path('edit_product/<int:product_id>/', edit_product, name='edit_product'),
-    path('delete_product/<int:product_id>', delete_product, name='delete_product'),
+    path('delete_product/<int:product_id>/', delete_product, name='delete_product'),
     path('login/',
          LoginView.as_view
          (
