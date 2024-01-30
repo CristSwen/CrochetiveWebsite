@@ -64,7 +64,6 @@ def shop(request):
 
 
 def create_product(request, category_id):
-    print("Create product view called")
     category = get_object_or_404(Category, pk=category_id)
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
