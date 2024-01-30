@@ -63,19 +63,23 @@ def shop(request):
         )
 
 
-def create_product(request, category_id):
-    category = get_object_or_404(Category, pk=category_id)
-    categories = Category.objects.all()
+
+
+
+def create_product(request, pk):
+    pk = int(pk)
+    category = get_object_or_404(Category, pk=pk)
+    form = ProductForm(data=request.POST or None, instance=item)
     if request.method == "POST":
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
+        if  form.is_valid():
             product = form.save(commit=False)
             product.category = category
             product.save()
             return redirect('home')
+        else:
+            print(form.errors)
     else:
-        form = ProductForm()
-    return render(request, 'app/create_product.html', {'form': form, 'category': category, 'categories': categories})
+        return render(request, 'app/create_product.html', {'form': form})
 
 
 
