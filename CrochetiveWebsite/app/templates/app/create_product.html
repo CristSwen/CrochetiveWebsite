@@ -1,12 +1,6 @@
-<!DOCTYPE html>
+{% extends "app/layout.html" %}
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
+{% block content %}
     <section>
         <h1>Create a New Product</h1>
         <form method="post" enctype="multipart/form-data">
@@ -31,5 +25,4 @@
         <a href="{% url 'home' %}">Home</a>
     </section>
 
-</body>
-</html>
+{% endblock %}
