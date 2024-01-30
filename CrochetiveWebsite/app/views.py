@@ -12,12 +12,14 @@ from .forms import ProductForm
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
+    categories = Category.objects.all()
     return render(
         request,
         'app/index.html',
         {
             'title':'Home Page',
             'year':datetime.now().year,
+            'categories': categories,
         }
     )
 
