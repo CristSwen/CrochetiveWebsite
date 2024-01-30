@@ -35,15 +35,17 @@
             {% endif %}
         </div>
 
-        {% for category in categories %}
-            {% if user.is_authenticated %}
+        
+        {% if user.is_authenticated %}
+            {% for category in categories %}
                 <p>User is authenticated: {{ user.username }}</p> <!--LINE FOR DEBUGGING-->
                 <p>Category: {{ category.name }}</p> <!--LINE FOR DEBUGGING-->
                 <a class="create_button" href="{% url 'create_product' category.id %}">Create {{ category.name }}</a>
             {% else %}
                 <p>User is not authenticated</p> <!--LINE FOR DEBUGGING-->
-            {% endif %}
-        {% endfor %}
+            {% endfor %}
+        {% endif %}
+        
         
 
         <!-- Will separate products based on what category they are in -->
