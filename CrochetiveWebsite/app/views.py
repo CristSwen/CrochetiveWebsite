@@ -65,6 +65,7 @@ def shop(request):
 
 def create_product(request, category_id):
     category = get_object_or_404(Category, pk=category_id)
+    categories = Category.objects.all()
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -74,7 +75,7 @@ def create_product(request, category_id):
             return redirect('home')
     else:
         form = ProductForm()
-    return render(request, 'app/create_product.html', {'form': form, 'category': category})
+    return render(request, 'app/create_product.html', {'form': form, 'category': category, 'categories': categories})
 
 
 
