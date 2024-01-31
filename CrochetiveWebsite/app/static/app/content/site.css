@@ -209,8 +209,8 @@ input[type="checkbox"].input-validation-error {
 /****    CREATE PAGE STYLING STARTS HERE    ****/
 
 .new_product {
-    margin-bottom: 100px;
-    margin-top: 100px;
+    margin-bottom: 200px;
+    margin-top: 200px;
 }
 
 /****    CREATE PAGE STYLING ENDS HERE    ****/
@@ -242,7 +242,7 @@ input[type="checkbox"].input-validation-error {
 
 /****  FOOTER SECTION STARTS HERE   *****/
 footer {
-    position: relative;
+    position: static;
     bottom: 0;
     left: 0;
     right: 0;
