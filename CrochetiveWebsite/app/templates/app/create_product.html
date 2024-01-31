@@ -4,24 +4,24 @@
 
     <section>
         <div class="new_product">
-            <h1>Create a New Product</h1>
-            <form method="post" enctype="multipart/form-data">
+            <h1 class="h1_create_product">Create a New Product</h1>
+            <form class='form_content' method="post" enctype="multipart/form-data">
                 {% csrf_token %}
+                <fieldset>
+                    <label for="name">Product Name:</label>
+                    <input type="text" id="name" name="name" required />
 
-                <label for="name">Product Name:</label>
-                <input type="text" id="name" name="name" required />
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
 
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" required></textarea>
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" step="0.01" required />
 
-                <label for="price">Price:</label>
-                <input type="number" id="price" name="price" step="0.01" required />
+                    <label for="image">Product Image:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required />
 
-                <label for="image">Product Image:</label>
-                <input type="file" id="image" name="image" accept="image/*" required />
-
-                <button type="submit">Submit Product</button>
-
+                    <button type="submit">Submit Product</button>
+                </fieldset>
             </form>
 
             <a href="{% url 'home' %}">Home</a>

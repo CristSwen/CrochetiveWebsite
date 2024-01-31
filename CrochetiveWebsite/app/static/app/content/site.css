@@ -49,12 +49,14 @@ input[type="checkbox"].input-validation-error {
     font-family: 'Poppins', sans-serif;
 }
 
-.home-body-container{
+body {
     min-height: 100vh;
     background: url(../images/yellow_blue_crocheting.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+
 
 .header{
     position: absolute;
@@ -209,15 +211,37 @@ input[type="checkbox"].input-validation-error {
 /****    CREATE PAGE STYLING STARTS HERE    ****/
 
 .new_product {
-    margin-bottom: 200px;
-    margin-top: 200px;
+    min-height: 500px;
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: Tahoma;
+    font-size: 16px;
+    color: white;
 }
 
+.form_content {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    background-color: #FFFACD;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f
+}
+
+.h1_create_product {
+    margin: 1em auto;
+    text-align: center;
+}
 /****    CREATE PAGE STYLING ENDS HERE    ****/
-
-
-
-
 /****   SHOP NAVBAR STYLING STARTS HERE   ****/
 .shop_navbar {
     display: block;
