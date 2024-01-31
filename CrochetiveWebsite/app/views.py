@@ -9,19 +9,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product
 from .forms import ProductForm
 
+
 def home(request):
-    """Renders the home page."""
-    assert isinstance(request, HttpRequest)
-    categories = Category.objects.all()
-    return render(
-        request,
-        'app/index.html',
-        {
-            'title':'Home Page',
-            'year':datetime.now().year,
-            'categories': categories,
-        }
-    )
+    return render(request, 'app/index.html')
 
 def contact(request):
     """Renders the contact page."""
@@ -77,7 +67,6 @@ def create_product(request):
 
 
 
-
 def edit_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == "POST":
@@ -96,3 +85,4 @@ def delete_product(request, product_id):
         product.delete()
         return redirect('shop')
     return render(request, 'app/delete_product.html', {'product': product})
+
