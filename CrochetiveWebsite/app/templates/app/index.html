@@ -43,8 +43,8 @@
         
 
         <!-- Will separate products based on what category they are in -->
-        {% for category in categories %}
-            <h1 id="{{ category.name|lower }}" class="centered-text home_title_text">{{ category.name }}</h1>
+        {% for category_name, category_display in Product.CATEGORY_CHOICES %}
+            <h1 id="{{ Product.category|lower }}" class="centered-text home_title_text">{{ Product.category }}</h1>
             {% for product in category.products.all %}
                 <div class="column">
                     <div class="card">

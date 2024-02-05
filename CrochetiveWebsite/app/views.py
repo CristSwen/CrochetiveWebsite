@@ -58,9 +58,9 @@ def create_product(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('app/index.html')
     content = {'form': form}
-    return render(request, 'app/create_product.html', content)
+    return render(request, 'app/index.html', content)
 
 
        
@@ -73,7 +73,7 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('app/index.html')
     else:
         form = ProductForm(instance=product)
     return redner(request, "app/edit_product.html", {'form': form, 'product': product})
@@ -83,6 +83,6 @@ def delete_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         product.delete()
-        return redirect('shop')
+        return redirect('app/index.html')
     return render(request, 'app/delete_product.html', {'product': product})
 
