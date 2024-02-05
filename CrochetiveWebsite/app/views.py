@@ -60,7 +60,7 @@ def create_product(request):
             form.save()
             return redirect('app/index.html')
     content = {'form': form}
-    return render(request, 'app/index.html', content)
+    return render(request, 'app/create_product.html', content)
 
 
        
