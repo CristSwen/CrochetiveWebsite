@@ -5,7 +5,7 @@ Definition of forms.
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import ugettext_lazy as _
-from .models import Product
+from .models import Product, ApparelProduct, ToysProduct, PetsProduct
 
 class BootstrapAuthenticationForm(AuthenticationForm):
     """Authentication form which uses boostrap CSS."""
@@ -21,4 +21,19 @@ class BootstrapAuthenticationForm(AuthenticationForm):
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
+        fields = '__all__'
+
+class ApparelForm(forms.ModelForm):
+    class Meta:
+        model = ApparelProduct
+        fields = '__all__'
+
+class ToysForm(forms.ModelForm):
+    class Meta:
+        model = ToysProduct
+        fields = '__all__'
+
+class PetsForm(forms.ModelForm):
+    class Meta:
+        model = PetsProduct
         fields = '__all__'
