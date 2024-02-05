@@ -1,11 +1,20 @@
-<!DOCTYPE html>
+{% extends "app/layout.html" %}
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+{% block content %}
 
-</body>
-</html>
+    <section>
+        <div class="new_product">
+            <h1 class="h1_create_product">Create a New Product</h1>
+            <form class='form_content' method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset>
+                    {{ form.as_p }}
+                    <button type="submit">Submit Product</button>
+                </fieldset>
+            </form>
+
+            <a href="{% url 'home' %}">Home</a>
+        </div>
+    </section>
+
+{% endblock %}
