@@ -8,6 +8,7 @@ from django.http import HttpRequest
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import ApparelProduct, ToysProduct, PetsProduct
 from .forms import ApparelForm, ToysForm, PetsForm
+import requests
 
 
 def home(request):
@@ -84,22 +85,22 @@ def create_product_pets(request):
     return render(request, 'app/create_pets.html', content)
 
 
-""" Views for the DETAILS of the created products """
+""" Views for the STORED products"""
 
-def stored_apparels(request, pk):
+def stored_apparels(request):
     entry = ApparelProduct.objects.all()
     content = {'entry': entry}
-    return render(request, 'app/create_apparel', content)
+    return render(request, 'app/index.html', content)
 
-def stored_pets(request, pk):
+def stored_pets(request):
     entry2 = PetsProduct.objects.all()
-    content = {'entry': entry}
-    return render(request, 'app/create_pets', content)
+    content = {'entry2': entry2}
+    return render(request, 'app/index.html', content)
 
-def stored_toys(request, pk):
+def stored_toys(request):
     entry3 = ToysProduct.objects.all()
-    content = {'entry': entry}
-    return render(request, 'app/create_toys', content)
+    content = {'entry3': entry3}
+    return render(request, 'app/index.html', content)
 
 
 
