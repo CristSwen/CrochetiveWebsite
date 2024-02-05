@@ -37,28 +37,45 @@
 
         
         {% if user.is_authenticated %}
-                <a class="create_button" href="{% url 'create_product' %}">Create</a>
+                <a class="create_button" href="{% url 'create_apparel' %}">Create Apparel</a>
+                <a class="create_button" href="{% url 'create_toys' %}">Create Toys</a>
+                <a class="create_button" href="{% url 'create_pets' %}">Create Pets</a>
         {% endif %}
         
         
 
         <!-- Will separate products based on what category they are in -->
-        {% for category_name, category_display in Product.CATEGORY_CHOICES %}
-            <h1 id="{{ Product.category|lower }}" class="centered-text home_title_text">{{ Product.category }}</h1>
-            {% for product in category.products.all %}
-                <div class="column">
-                    <div class="card">
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width:100%"/>
-                        <h1>{{ product.name }}</h1>
-                        <p class="price">${{ product.price }}</p>
-                        <!-- If User is authenticated/owner will allow them to edit/delete-->
-                        {% if user.is_authenticated and user == product.owner %}
-                            <p><a href="{% url 'edit_product' product.id %}">Edit</a></p>
-                            <p><a href="{% url 'delete_product' product.id %}">Delete</a></p>
-                        {% endif %}
-                    </div>
+        
+
+        <h1 id="apparel">Apparel</h1>
+        {% for s in entry %}
+            <div class="column">
+                <div class="card">
+                    <img src="{{ s.image }}" alt="{{ s.name }}" style="width:100%"/>
+                    <h1>{{ s.name }}</h1>
+                    <p class="price">${{ s.price }}</p>
                 </div>
-            {% endfor %}
+            </div>
+        {% endfor %}
+        <h1 id="toys">Toys</h1>
+        {% for s in entry2 %}
+            <div class="column">
+                <div class="card">
+                    <img src="{{ s.image }}" alt="{{ s.name }}" style="width:100%"/>
+                    <h1>{{ s.name }}</h1>
+                    <p class="price">${{ s.price }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        <h1 id="pets">Pets</h1>
+        {% for s in entry3 %}
+            <div class="column">
+                <div class="card">
+                    <img src="{{ s.image }}" alt="{{ s.name }}" style="width:100%"/>
+                    <h1>{{ s.name }}</h1>
+                    <p class="price">${{ s.price }}</p>
+                </div>
+            </div>
         {% endfor %}
     </div>
 

@@ -6,8 +6,8 @@ from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Product
-from .forms import ProductForm
+from .models import ApparelProduct, ToysProduct, PetsProduct
+from .forms import ApparelForm, ToysForm, PetsForm
 
 
 def home(request):
@@ -53,17 +53,55 @@ def shop(request):
         )
 
 
-def create_product(request):
-    form = ProductForm(data=request.POST or None)
+
+"""View CREATE functions """
+
+def create_product_apparel(request):
+    form = ApparelForm(data=request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
             form.save()
             return redirect('about')
     content = {'form': form}
-    return render(request, 'app/create_product.html', content)
+    return render(request, 'app/create_apparel.html', content)
+
+def create_product_toys(request):
+    form = ToysForm(data=request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect('about')
+    content = {'form': form}
+    return render(request, 'app/create_toys.html', content)
+
+def create_product_pets(request):
+    form = PetsForm(data=request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect('about')
+    content = {'form': form}
+    return render(request, 'app/create_pets.html', content)
 
 
-       
+""" Views for the DETAILS of the created products """
+
+def stored_apparels(request, pk):
+    entry = ApparelProduct.objects.all()
+    content = {'entry': entry}
+    return render(request, 'app/create_apparel', content)
+
+def stored_pets(request, pk):
+    entry2 = PetsProduct.objects.all()
+    content = {'entry': entry}
+    return render(request, 'app/create_pets', content)
+
+def stored_toys(request, pk):
+    entry3 = ToysProduct.objects.all()
+    content = {'entry': entry}
+    return render(request, 'app/create_toys', content)
+
+
 
 
 
