@@ -85,7 +85,7 @@ def create_product_pets(request):
     return render(request, 'app/create_pets.html', content)
 
 
-""" Views for the STORED products"""
+""" Views for the STORED products and will allow the products to show on the webpage."""
 
 def stored_apparels(request):
     entry = ApparelProduct.objects.all()
