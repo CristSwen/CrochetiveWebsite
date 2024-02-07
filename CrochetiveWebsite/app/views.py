@@ -9,6 +9,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import ApparelProduct, ToysProduct, PetsProduct
 from .forms import ApparelForm, ToysForm, PetsForm
 import requests
+from django.contrib import admin
 
 
 def home(request):
@@ -125,3 +126,6 @@ def delete_product(request, product_id):
         return redirect('app/index.html')
     return render(request, 'app/delete_product.html', {'product': product})
 
+admin.site.register(ApparelProduct)
+admin.site.register(ToysProduct)
+admin.site.register(PetsProduct)
