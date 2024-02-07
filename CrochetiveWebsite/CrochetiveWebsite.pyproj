@@ -64,6 +64,7 @@
     <Content Include="app\static\app\images\crochet_cat.jpg" />
     <Content Include="app\static\app\images\crochet_collar.webp" />
     <Content Include="app\static\app\images\yellow_blue_crocheting.jpg" />
+    <Content Include="app\templates\app\apparel_shop.html" />
     <Content Include="app\templates\app\create_apparel.html" />
     <Content Include="app\templates\app\create_pets.html" />
     <Content Include="app\templates\app\create_toys.html" />
