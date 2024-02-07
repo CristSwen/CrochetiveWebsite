@@ -2,7 +2,16 @@
 
 {% block content%}
 
-
+    <h1 id="apparel">Apparel</h1>
+        {% for s in entry %}
+            <div class="column">
+                <div class="card">
+                    <img src="{{ s.image }}" alt="{{ s.name }}" style="width:100%"/>
+                    <h1>{{ s.name }}</h1>
+                    <p class="price">${{ s.price }}</p>
+                </div>
+            </div>
+        {% endfor %}
 
 
 
