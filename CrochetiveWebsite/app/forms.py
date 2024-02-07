@@ -6,6 +6,7 @@ from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import ugettext_lazy as _
 from .models import ApparelProduct, ToysProduct, PetsProduct
+from django.forms import ModelForm
 
 class BootstrapAuthenticationForm(AuthenticationForm):
     """Authentication form which uses boostrap CSS."""
@@ -19,17 +20,17 @@ class BootstrapAuthenticationForm(AuthenticationForm):
                                    'placeholder':'Password'}))
 
 
-class ApparelForm(forms.ModelForm):
+class ApparelForm(ModelForm):
     class Meta:
         model = ApparelProduct
         fields = '__all__'
 
-class ToysForm(forms.ModelForm):
+class ToysForm(ModelForm):
     class Meta:
         model = ToysProduct
         fields = '__all__'
 
-class PetsForm(forms.ModelForm):
+class PetsForm(ModelForm):
     class Meta:
         model = PetsProduct
         fields = '__all__'
