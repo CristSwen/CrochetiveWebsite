@@ -54,6 +54,18 @@ def shop(request):
             }
         )
 
+def shop_apparel(request):
+    """Renders the Shop page"""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/apparel_shop.html',
+        {
+            'title':'Shop',
+            'message':'The Shop',
+            'year':datetime.now().year,
+            }
+        )
 
 
 """View CREATE functions """
@@ -63,7 +75,7 @@ def create_product_apparel(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return redirect('about')
+            return redirect('shop_apparel')
     content = {'form': form}
     return render(request, 'app/create_apparel.html', content)
 
@@ -72,7 +84,7 @@ def create_product_toys(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return redirect('about')
+            return redirect('shop_apparel')
     content = {'form': form}
     return render(request, 'app/create_toys.html', content)
 
@@ -81,7 +93,7 @@ def create_product_pets(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return redirect('about')
+            return redirect('shop_apparel')
     content = {'form': form}
     return render(request, 'app/create_pets.html', content)
 
@@ -91,7 +103,7 @@ def create_product_pets(request):
 def stored_apparels(request):
     entry = ApparelProduct.objects.all()
     content = {'entry': entry}
-    return render(request, 'app/index.html', content)
+    return render(request, 'app/apparel_shop.html', content)
 
 def stored_pets(request):
     entry2 = PetsProduct.objects.all()
